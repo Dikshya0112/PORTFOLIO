@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    ;
+}
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #887068;
+    /* Color of the scrollbar handle */
+    border-radius: 10px;
+    /* Roundness of the scrollbar handle */
+    border: 2px solid #f1f1f1;
+    /* Border around the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Color of the scrollbar handle on hover */
+}
+
+body {
+    background-color: #f3f0ed;
+
+}
+
+a .active {
+    color: #795548;
+}
+
+.navBar {
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #e8d8be8f; */
+    flex-direction: column;
+
+}
+
+.navBar .name {
+    font-size: 32px;
+    color: black;
+    font-weight: 600;
+    margin: 10px 0 0 10px;
+    opacity: 0;
+    animation: slideTop 1s ease 1 forwards;
+}
+
+.sub ul {
+    list-style: none;
+}
+
+.navBar ul {
+    display: flex;
+    gap: 1.5cm;
+    align-items: center;
+    opacity: 0;
+    animation: slideTop 1s ease 0.4s 1 forwards;
+}
+
+.navBar ul a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    transition: .3s ease-out;
+
+}
+
+.navBar ul:last-child {
+    margin-right: 24px;
+}
+
+.navBar ul a:hover {
+    color: #795548;
+
+}
+
+.landing_about h2 {
+    font-size: 40px;
+}
+
+.landing_about h1 {
+    font-size: 75px;
+}
+
+.landing_about p {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.landingPage {
+    height: 88vh;
+    width: 100%;
+    background-image: url('images/PORTFOLIO\ \(3\).png');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    position: relative;
+
+}
+
+.landing_about {
+    position: relative;
+    top: 4cm;
+    margin-left: 15px;
+    width: 55%;
+    opacity: 0;
+    animation: slideBottom 2s ease 0.5s 1 forwards;
+
+}
+
+.landing_about h1 {
+    opacity: 0;
+    animation: slideLeft 1s ease 0.6s 1 forwards;
+}
+
+.text {
+    color: #795548;
+}
+
+.contact_buttons {
+    position: absolute;
+    bottom: 2.2cm;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: slideLeft 1s ease 0.6s 1 forwards;
+}
+
+.contact_buttons img:hover {
+    box-shadow: 0 0 5px #795548;
+}
+
+.contact_buttons img {
+    height: 65px;
+    width: 65px;
+    margin: 0 5px 0 15px;
+    border: 2px solid #795548;
+
+}
+
+.knowMore {
+    position: absolute;
+    bottom: .8cm;
+    margin-left: 92px;
+    opacity: 0;
+    animation: slideLeft 2s ease 1.3s 1 forwards;
+}
+
+.knowMore button {
+    background-color: transparent;
+    color: #795548;
+    padding: 6px 14px;
+    border: 2px solid #795548;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #795548;
+
+}
+
+.knowMore button:hover {
+    border: 3px double #795548;
+}
+
+.aboutMe {
+    height: 100vh;
+    margin-top: 2cm;
+    position: relative;
+}
+
+.aboutMe .aboutbtn {
+    right: 2cm;
+}
+
+.aboutMe .aboutImg {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1cm;
+    margin: .5cm 3cm 0.5cm 3cm;
+
+}
+
+.aboutMe i {
+    font-size: 32px;
+    letter-spacing: 0.5px;
+    position: absolute;
+    left: 12cm;
+
+
+
+}
+
+.aboutMe .aboutImg img {
+    opacity: 0;
+    animation: slideLeft 3s ease 1.3s 1 forwards;
+}
+
+.aboutMe .aboutImg p {
+    opacity: 0;
+    animation: slideRight 3s ease 1.3s 1 forwards;
+}
+
+.aboutMe h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.aboutMe p {
+    font-size: 25px;
+}
+
+.aboutMe span {
+    color: #795548;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width:1228px) {
+    .landing_about {
+        top: 2cm;
+    }
+
+    .aboutMe .aboutImg {
+        grid-template-columns: .5fr 1.5fr;
+        margin: 5px 1cm 0.5cm .3cm;
+    }
+
+    .aboutMe i {
+        left: 8cm;
+    }
+
+    .aboutMe .aboutbtn {
+
+        bottom: -4cm;
+    }
+
+    .aboutMe p {
+        font-size: 22px;
+    }
+
+    .aboutMe .aboutImg img {
+        height: 470px;
+    }
+    .landingPage{
+        background-position: -927px;
+    }
+}
+
+@media only screen and (max-width:1020px) {
+    .landingPage{
+           background-position: -1029px;
+    }
+ 
+    .landing_about h2 {
+        font-size: 35px;
+    }
+
+    .landing_about h1 {
+        font-size: 65px;
+    }
+
+    .landing_about p {
+        font-size: 23px;
+    }
+
+    .aboutMe p {
+        font-size: 20px;
+    }
+
+    .aboutMe i {
+        left: 5.5cm;
+        font-size: 27px;
+    }
+
+    .aboutMe .aboutImg img {
+        height: 430px;
+    }
+}
+
+
+
+@media only screen and (max-width:905px) {
+    .landingPage {
+        background-position: -861px;
+    }
+    .landing_about h2 {
+        font-size: 30px;
+    }
+
+    .landing_about h1 {
+        font-size: 60px;
+    }
+
+    .landing_about p {
+        font-size: 20px;
+    }
+
+    /* .landing_about {
+        top: 15px;
+    } */
+    .contact_buttons img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .aboutMe .aboutImg img {
+        height: 360px;
+    }
+
+    .aboutMe p {
+        font-size: 19px;
+    }
+
+    .aboutMe i {
+        left: 4.5cm;
+
+    }
+    .navBar ul:last-child {
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width:810px) {
+    .landing_about h1 {
+        font-size: 40px;
+    }
+
+    .navBar ul:last-child {
+        margin-right: 0;
+    }
+    .landing_about {
+
+        width: 60%;
+  
+    }
+    .aboutMe h1 {
+        font-size: 40px;
+    }
+
+    .aboutMe .aboutImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .aboutMe .aboutImg img {
+        height: 260px;
+        width: 267px;
+    }
+
+    .aboutMe p {
+        font-size: 17px;
+    }
+
+    .aboutMe i {
+        left: 2.9cm;
+        font-size: 24px;
+
+    }
+
+    .aboutMe .aboutbtn {
+        bottom: -2cm;
+    }
+
+    .aboutMe .aboutImg {
+        margin: 5px 25px 5px 30px;
+    }
+
+    .landing_about h2 {
+        font-size: 37px;
+    }
+    .landing_about h1 {
+        font-size: 56px;
+    }
+    .landingPage {
+        background-position: -665px;
+    }
+
+    .navBar ul {
+        gap: 15px;
+    }
+
+    .landing_about p {
+        font-size: 25px;
+        margin-top: 364px;
+    }
+}
+
+@media only screen and (max-width:660px) {
+    .navBar .name {
+        font-size: 30px;
+
+    }
+
+    .navBar ul a {
+        font-size: 17px;
+    }
+
+    .landing_about h2 {
+        font-size: 20px;
+    }
+
+    .landing_about p {
+        margin-top: 17px;
+    }
+
+    .aboutMe i {
+
+        font-size: 22px;
+    }
+
+    .aboutMe i {
+        left: 1.6cm;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .aboutMe p {
+        font-size: 15px;
+    }
+
+    .aboutMe .aboutbtn {
+        bottom: -15px;
+    }
+
+    .landing_about h1 {
+        font-size: 39px;
+    }
+
+    .landingPage {
+        background-position: -382px;
+    }
+
+}
+
+@media only screen and (max-width:511px) {
+
+
+    .aboutMe i {
+        left: 75px;
+        font-size: 18px;
+        /* margin-bottom: 20px; */
+    }
+
+    .aboutMe .aboutbtn {
+        bottom: -2cm;
+    }
+
+    .aboutMe i {
+        left: 34px;
+        font-size: 18px;
+        /* margin-bottom: 20px; */
+    }
+
+    /* .landingPage {
+        background-position: -788px;
+    } */
+
+    .landing_about p {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:415px) {
+    .landingPage {
+        background-position: -500px;
+    }
+
+    .landing_about h1 {
+        font-size: 29px;
+    }
+
+    .landing_about h2 {
+        font-size: 16px;
+    }
+    .landing_about p {
+        font-size: 17px;
+    }
+
+    .contact_buttons {
+
+        bottom: 3.2cm;
+
+    }
+
+    .navBar ul a {
+        font-size: 14px;
+    }
+
+    .aboutMe h1 {
+        font-size: 29px;
+    }
+
+    .aboutMe .aboutImg img {
+        height: 208px;
+        width: 217px;
+    }
+
+    .aboutMe i {
+        left: 33px;
+        font-size: 15px;
+        /* margin-bottom: 20px; */
+    }
+
+}
+
+@media only screen and (max-width:376px) {
+    .landingPage {
+        background-position: -550px;
+    }
+    /* .aboutMe i {
+        left: 33px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    } */
+}
+@media only screen  and (max-width :376px)and (max-height:668px){
+    .landingPage {
+        background-position: -511px;
+    }
+}
